@@ -1,0 +1,131 @@
+/* The navigation bar */
+#fixed {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+#logout{float: right;}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+input[type=text]#search2 {
+    width: 120px;
+	height:38px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    background-image: url('../Images/search.png');
+    background-position: 8px 6px; 
+    background-repeat: no-repeat;
+    padding: 10px 20px 8px 40px;	
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	position:relative;
+	color:black;
+}
+
+input[type=text]#search2:focus {
+    width: 115%;
+}
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+#toggle { float: right;}
+
+/* ----------------For Responsive Topnav -----------------------*/
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+#hideshow{top:90%;margin-left: 97%;}
+#HideSearch { display:none; position:relative; float: right;}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:920px) {
+  ul.topnav li:not(:first-child) {display: none;}
+
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:950px) {
+  #hideshow{top:90%;margin-left: 95%;}
+}
+@media screen and (max-width:800px) {
+  #hideshow{top:90%;margin-left: 94%;}
+}
+@media screen and (max-width:750px) {
+  #hideshow{top:90%;margin-left: 93%;}
+}
+@media screen and (max-width:400px) {
+  #hideshow{top:88%;margin-left: 87%;}
+}
+@media screen and (max-width:920px) {
+  ul.topnav.responsive {position: relative;}
+  
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+    ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+
+  #RightSideIconTop { float: right; }
+  #logout{position:absolute;}
+  #toggle { position:absolute;}
+  #HideSearch{ display:block; position:relative; float: right;}
+
+  input[type=text]#search2 {
+    width: 100%;
+	display: none;
+}
+
+}
